@@ -41,6 +41,8 @@
             tipo_usuario = new CheckBox();
             saldo_text = new TextBox();
             saldo = new Label();
+            login = new Button();
+            cadastro = new Button();
             SuspendLayout();
             // 
             // cadastrar
@@ -158,11 +160,31 @@
             saldo.TabIndex = 14;
             saldo.Text = "Saldo inicial";
             // 
+            // login
+            // 
+            login.Location = new Point(451, 5);
+            login.Name = "login";
+            login.Size = new Size(75, 23);
+            login.TabIndex = 15;
+            login.Text = "Login";
+            login.UseVisualStyleBackColor = true;
+            // 
+            // cadastro
+            // 
+            cadastro.Location = new Point(370, 5);
+            cadastro.Name = "cadastro";
+            cadastro.Size = new Size(75, 23);
+            cadastro.TabIndex = 16;
+            cadastro.Text = "Cadastro";
+            cadastro.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(536, 320);
+            Controls.Add(cadastro);
+            Controls.Add(login);
             Controls.Add(saldo);
             Controls.Add(saldo_text);
             Controls.Add(tipo_usuario);
@@ -197,5 +219,7 @@
         private CheckBox tipo_usuario;
         private TextBox saldo_text;
         private Label saldo;
+        private Button login;
+        private Button cadastro;
     }
 }
