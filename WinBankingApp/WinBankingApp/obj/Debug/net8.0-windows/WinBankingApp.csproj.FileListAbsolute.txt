@@ -1,5 +1,4 @@
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.csproj.AssemblyReference.cache
-C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.Form1.resources
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.csproj.GenerateResource.cache
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.AssemblyInfoInputs.cache
@@ -30,3 +29,6 @@ C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-window
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.pdb
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.genruntimeconfig.cache
 C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\ref\WinBankingApp.dll
+C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.FormCadastro.resources
+C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.FormLogin.resources
+C:\Projetos\Teste-BankingApp\WinBankingApp\WinBankingApp\obj\Debug\net8.0-windows\WinBankingApp.FormTransferencia.resources

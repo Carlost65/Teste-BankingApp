@@ -2,11 +2,17 @@ using WinBankingApp.Classes;
 
 namespace WinBankingApp
 {
-    public partial class Form1 : Form
+    public partial class FormCadastro : Form
     {
-        public Form1()
+        public FormCadastro()
         {
             InitializeComponent();
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
         }
 
         private void cadastrar_Click(object sender, EventArgs e)

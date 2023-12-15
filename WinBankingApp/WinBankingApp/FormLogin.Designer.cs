@@ -29,31 +29,23 @@
         private void InitializeComponent()
         {
             cadastro = new Button();
-            login = new Button();
             titulo = new Label();
             cpf_cnpj = new Label();
             usuario_text = new TextBox();
             senha = new Label();
             senha_text = new TextBox();
+            entrar = new Button();
             SuspendLayout();
             // 
             // cadastro
             // 
-            cadastro.Location = new Point(366, 8);
+            cadastro.Location = new Point(448, 8);
             cadastro.Name = "cadastro";
             cadastro.Size = new Size(75, 23);
-            cadastro.TabIndex = 17;
+            cadastro.TabIndex = 18;
             cadastro.Text = "Cadastro";
             cadastro.UseVisualStyleBackColor = true;
-            // 
-            // login
-            // 
-            login.Location = new Point(448, 8);
-            login.Name = "login";
-            login.Size = new Size(75, 23);
-            login.TabIndex = 18;
-            login.Text = "Login";
-            login.UseVisualStyleBackColor = true;
+            cadastro.Click += cadastro_Click;
             // 
             // titulo
             // 
@@ -76,9 +68,11 @@
             // usuario_text
             // 
             usuario_text.Location = new Point(160, 64);
+            usuario_text.MaxLength = 14;
             usuario_text.Name = "usuario_text";
             usuario_text.Size = new Size(191, 23);
             usuario_text.TabIndex = 21;
+            usuario_text.KeyPress += usuario_text_KeyPress;
             // 
             // senha
             // 
@@ -96,17 +90,27 @@
             senha_text.Size = new Size(191, 23);
             senha_text.TabIndex = 23;
             // 
+            // entrar
+            // 
+            entrar.Location = new Point(215, 157);
+            entrar.Name = "entrar";
+            entrar.Size = new Size(75, 23);
+            entrar.TabIndex = 24;
+            entrar.Text = "Entrar";
+            entrar.UseVisualStyleBackColor = true;
+            entrar.Click += entrar_Click;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(535, 320);
+            Controls.Add(entrar);
             Controls.Add(senha_text);
             Controls.Add(senha);
             Controls.Add(usuario_text);
             Controls.Add(cpf_cnpj);
             Controls.Add(titulo);
-            Controls.Add(login);
             Controls.Add(cadastro);
             Name = "FormLogin";
             Text = "FormLogin";
@@ -123,5 +127,6 @@
         private TextBox usuario_text;
         private Label senha;
         private TextBox senha_text;
+        private Button entrar;
     }
 }
