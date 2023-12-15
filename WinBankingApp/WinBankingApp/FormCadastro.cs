@@ -19,14 +19,14 @@ namespace WinBankingApp
         {
             try
             {
-                if (!nome_text.Text.Equals("") && !email_text.Text.Equals("") && !cpf_cnpj_text.Text.Equals("") && !senha_text.Text.Equals("") && !saldo_text.Text.Equals("") && saldo_val() != -1)
+                if (!nome_text.Text.Equals("") && !email_text.Text.Equals("") && !cpf_cnpj_text.Text.Equals("") && !senha_text.Text.Equals("") && !saldo_text.Text.Equals("") && Convert.ToDouble(saldo_text.Text) != -1)
                 {
                     Usuario cadUsuario = new Usuario();
                     cadUsuario.nome = nome_text.Text;
                     cadUsuario.email = email_text.Text;
                     cadUsuario.cpf_cnpj = cpf_cnpj.Text;
                     cadUsuario.senha = senha_text.Text;
-                    cadUsuario.saldo = saldo_val();
+                    cadUsuario.saldo = Convert.ToDouble(saldo_text.Text);
                     cadUsuario.tipo_usuario = tipoDeUsuario();
 
                     if (cadUsuario.cadastrarUsuario())
@@ -56,46 +56,30 @@ namespace WinBankingApp
             }
         }
 
-        private void saldo_text_KeyPress(object sender, KeyPressEventArgs args)
+        private void saldo_text_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Obtém o texto atual na TextBox
             string text = saldo_text.Text;
 
             // Permite apenas dígitos, backspace e ponto decimal
-            if (!Char.IsDigit(args.KeyChar) && args.KeyChar != (char)8 && args.KeyChar != '.')
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != ',')
             {
-                args.Handled = true;
+                e.Handled = true;
             }
 
             // Permite apenas um ponto decimal
-            if (args.KeyChar == '.' && text.Contains('.'))
+            if (e.KeyChar == ',' && text.Contains(','))
             {
-                args.Handled = true;
+                e.Handled = true;
             }
         }
 
-        private void cpf_cnpj_text_KeyPress(object sender, KeyPressEventArgs args)
+        private void cpf_cnpj_text_KeyPress(object sender, KeyPressEventArgs e)
         {
             //permite apenas digitos
-            if (!Char.IsDigit(args.KeyChar) && args.KeyChar != (char)8)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
-                args.Handled = true;
-            }
-        }
-
-        //conversão do campo de texto de saldo para double
-        private double saldo_val()
-        {
-            if (double.TryParse(saldo_text.Text, out double saldoConvetido))
-            {
-                // A conversão foi bem-sucedida
-                return saldoConvetido;
-            }
-            else
-            {
-                // A conversao falhou
-                MessageBox.Show("Valor inválido. Insira um número válido.");
-                return -1;
+                e.Handled = true;
             }
         }
         private string tipoDeUsuario()

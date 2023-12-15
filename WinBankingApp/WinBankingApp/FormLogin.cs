@@ -27,7 +27,7 @@ namespace WinBankingApp
         {
             if (Login())
             {
-                FormTransferencia formTransferencia = new FormTransferencia();
+                FormTransferencia formTransferencia = new FormTransferencia(usuario_text.Text);
                 formTransferencia.Show();
                 this.Close();
             }

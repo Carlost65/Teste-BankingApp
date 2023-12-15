@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace WinBankingApp.Classes
 {
-    internal class Transacao
+    internal class Transferencia
     {
         public static bool RealizarTransferencia(string cpfRemetente, string cpfDestinatario, double valor)
         {

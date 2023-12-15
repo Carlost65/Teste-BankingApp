@@ -108,6 +108,7 @@
             valor_transferencia_text.Name = "valor_transferencia_text";
             valor_transferencia_text.Size = new Size(204, 23);
             valor_transferencia_text.TabIndex = 7;
+            valor_transferencia_text.KeyPress += valor_transferencia_text_KeyPress;
             // 
             // transferir
             // 
@@ -117,6 +118,7 @@
             transferir.TabIndex = 8;
             transferir.Text = "Transferir";
             transferir.UseVisualStyleBackColor = true;
+            transferir.Click += transferir_Click;
             // 
             // FormTransferencia
             // 
