@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinBankingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aca3223787cbff9757e818662e486055ca98d63c")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinBankingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinBankingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

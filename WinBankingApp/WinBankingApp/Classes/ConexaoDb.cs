@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinBankingApp.Classes
 {
-    static class ConexaoDb
+     class ConexaoDb
     {
         //declaração das variaves de informações do banco de dados 
         private const string server = "localhost";
@@ -35,6 +35,7 @@ namespace WinBankingApp.Classes
                 {
                     usuario = new Usuario
                     {
+                        id = Convert.ToInt16(reader["id"]),
                         nome = reader["nome_completo"].ToString(),
                         cpf_cnpj = reader["cpf_cnpj"].ToString(),
                         email = reader["email"].ToString(),

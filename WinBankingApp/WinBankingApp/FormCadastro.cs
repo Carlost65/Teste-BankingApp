@@ -1,3 +1,4 @@
+using MySql.Data.MySqlClient;
 using WinBankingApp.Classes;
 
 namespace WinBankingApp
@@ -19,6 +20,12 @@ namespace WinBankingApp
         {
             try
             {
+                // Verificar se o CPF já existe no banco de dados
+                if (VerificarExistenciaCPF(cpf_cnpj.Text))
+                {
+                    MessageBox.Show("CPF já cadastrado. Não é possível cadastrar novamente.");
+                    return;
+                }
                 if (!nome_text.Text.Equals("") && !email_text.Text.Equals("") && !cpf_cnpj_text.Text.Equals("") && !senha_text.Text.Equals("") && !saldo_text.Text.Equals("") && Convert.ToDouble(saldo_text.Text) != -1)
                 {
                     Usuario cadUsuario = new Usuario();
@@ -90,6 +97,30 @@ namespace WinBankingApp
             }
             else
                 return "comum";
+        }
+
+        // Método para verificar se o CPF já existe no banco de dados
+        private bool VerificarExistenciaCPF(string cpf)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(ConexaoDb.dbConnection);
+                connection.Open();
+
+                // Preparar a consulta SQL para contar quantos registros têm o CPF fornecido
+                string selectQuery = $"SELECT COUNT(*) FROM bankingapp.usuarios WHERE cpf_cnpj = '{cpf}'";
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                connection.Close();
+
+                return count > 0; // Retorna true se o CPF já existe
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao verificar existência de CPF: {ex.Message}");
+                return false; // Em caso de erro, assume que o CPF não existe para evitar cadastro duplicado
+            }
         }
     }
 }

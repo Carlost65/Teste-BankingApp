@@ -30,10 +30,8 @@
         {
             Sair = new Button();
             titulo = new Label();
-            saldo = new Label();
             destinatario = new Label();
             valor_transferencia = new Label();
-            valor_saldo_text = new Label();
             destinatario_text = new TextBox();
             valor_transferencia_text = new TextBox();
             transferir = new Button();
@@ -58,15 +56,6 @@
             titulo.TabIndex = 1;
             titulo.Text = "Transferencia";
             // 
-            // saldo
-            // 
-            saldo.AutoSize = true;
-            saldo.Location = new Point(85, 54);
-            saldo.Name = "saldo";
-            saldo.Size = new Size(39, 15);
-            saldo.TabIndex = 2;
-            saldo.Text = "Saldo:";
-            // 
             // destinatario
             // 
             destinatario.AutoSize = true;
@@ -84,14 +73,6 @@
             valor_transferencia.Size = new Size(123, 15);
             valor_transferencia.TabIndex = 4;
             valor_transferencia.Text = "Valor da transferencia:";
-            // 
-            // valor_saldo_text
-            // 
-            valor_saldo_text.AutoSize = true;
-            valor_saldo_text.Location = new Point(209, 54);
-            valor_saldo_text.Name = "valor_saldo_text";
-            valor_saldo_text.Size = new Size(0, 15);
-            valor_saldo_text.TabIndex = 5;
             // 
             // destinatario_text
             // 
@@ -128,10 +109,8 @@
             Controls.Add(transferir);
             Controls.Add(valor_transferencia_text);
             Controls.Add(destinatario_text);
-            Controls.Add(valor_saldo_text);
             Controls.Add(valor_transferencia);
             Controls.Add(destinatario);
-            Controls.Add(saldo);
             Controls.Add(titulo);
             Controls.Add(Sair);
             Name = "FormTransferencia";
@@ -144,10 +123,8 @@
 
         private Button Sair;
         private Label titulo;
-        private Label saldo;
         private Label destinatario;
         private Label valor_transferencia;
-        private Label valor_saldo_text;
         private TextBox destinatario_text;
         private TextBox valor_transferencia_text;
         private Button transferir;

@@ -45,7 +45,9 @@ namespace WinBankingApp.Classes
                 AtualizarSaldoNoBanco(remetente);
                 AtualizarSaldoNoBanco(destinatario);
 
-                MessageBox.Show($"Transferência de {valor:C} realizada com sucesso de {remetente.nome} para {destinatario.nome}.");
+                RegistroTranferencia.RegistrarTransacaoNoBanco(cpfRemetente, cpfDestinatario, valor);
+
+                MessageBox.Show($"Transferência de {valor:C} realizada com sucesso de {remetente.nome} para {destinatario.nome}./n Seu saldo atual é de {remetente.saldo}.");
                 return true;
             }
             catch (Exception ex)
